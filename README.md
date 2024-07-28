@@ -1,11 +1,16 @@
 # AWS EC2 Instance Terraform module
 
+This Terraform module will create an EC2 instance and alert with Cloudwatch. It will also create the rules for a security group.
+
+It will install docker and fail2ban within the instance post-creation.
+
 ## Usage
 
 ```hcl
 provider "aws" {
   region = "us-east-2"
-  profile = "project"
+  access_key = "lorem"
+  secret_key = "loremIpsum"
 }
 
 ...
