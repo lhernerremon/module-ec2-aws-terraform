@@ -8,14 +8,14 @@ resource "aws_instance" "main_instance" {
   root_block_device {
     volume_size = var.volume_size
     tags = {
-      Name        = "${var.project_name}-${var.project_environment}-EBS"
+      Name        = local.project
       project     = var.project_name
       environment = var.project_environment
     }
   }
 
   tags = {
-    Name        = "${var.project_name}-${var.project_environment}-EC2"
+    Name        = "${local.project}-EC2"
     project     = var.project_name
     environment = var.project_environment
   }
