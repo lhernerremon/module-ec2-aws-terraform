@@ -1,5 +1,5 @@
 resource "aws_security_group" "security_group" {
-  name   = "${var.project_name}-${var.project_environment}-SG"
+  name   = "${local.project}-SG"
   vpc_id = data.aws_vpc.default_vpc.id
 
   dynamic "ingress" {

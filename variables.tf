@@ -1,10 +1,14 @@
 variable "project_name" {
+  type = string
 }
 
 variable "project_environment" {
+  type    = string
+  default = "development"
 }
 
 variable "ami_instance" {
+  type = string
 }
 
 variable "instance_type" {
