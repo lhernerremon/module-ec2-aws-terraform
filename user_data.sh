@@ -27,6 +27,15 @@ sudo systemctl enable fail2ban.service
 sudo systemctl restart fail2ban.service
 
 # Aditional
+echo "alias ll=\"ls -alFh\"" >> /home/ubuntu/.bash_aliases
+echo "alias la=\"ls -A\"" >> /home/ubuntu/.bash_aliases
+echo "alias l=\"ls -CF\"" >> /home/ubuntu/.bash_aliases
+echo "alias python=\"python3\"" >> /home/ubuntu/.bash_aliases
+echo "alias pip=\"pip3\"" >> /home/ubuntu/.bash_aliases
 echo "alias d=\"docker\"" >> /home/ubuntu/.bash_aliases
 echo "alias docker-compose=\"docker compose\"" >> /home/ubuntu/.bash_aliases
 echo "alias dc=\"docker-compose\"" >> /home/ubuntu/.bash_aliases
+echo "alias dcp=\"dc -f docker-compose.production.yml\"" >> /home/ubuntu/.bash_aliases
+echo "alias dcpm=\"dcp run --rm django python manage.py\"" >> /home/ubuntu/.bash_aliases
+echo "alias ggpull=\"git pull\"" >> /home/ubuntu/.bash_aliases
+echo "alias gpull=\"ggpull origin\"" >> /home/ubuntu/.bash_aliases
