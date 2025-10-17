@@ -18,7 +18,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
   }
 
   alarm_actions = [
-    "arn:aws:automate:${data.aws_region.current.name}:ec2:reboot"
+    "arn:aws:automate:${data.aws_region.current.region}:ec2:reboot"
   ]
 
   tags = {
@@ -48,7 +48,7 @@ resource "aws_cloudwatch_metric_alarm" "status_check_failed" {
   }
 
   alarm_actions = [
-    "arn:aws:automate:${data.aws_region.current.name}:ec2:reboot"
+    "arn:aws:automate:${data.aws_region.current.region}:ec2:reboot"
   ]
 
   tags = {
