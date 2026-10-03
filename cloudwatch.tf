@@ -22,7 +22,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
   ]
 
   tags = {
-    Name        = "${local.project}-CPUUtilization-CloudWatch",
+    Name        = "${local.project}-EC2-CPU-ALARM"
     project     = var.project_name
     environment = var.project_environment
   }
@@ -52,7 +52,7 @@ resource "aws_cloudwatch_metric_alarm" "status_check_failed" {
   ]
 
   tags = {
-    Name        = "${local.project}-StatusCheckFailed-CloudWatch"
+    Name        = "${local.project}-EC2-STATUS-ALARM"
     project     = var.project_name
     environment = var.project_environment
   }
